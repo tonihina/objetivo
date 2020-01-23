@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/bienvenida.css">
+	<link rel="stylesheet" href="css/estilos.css">
+	<link rel="stylesheet" href="css/temporizador.css">
+	
+
+<body class="fondo4">
+    <div id="contenedor_carga">
+		<img src="img/logo.png" id="logoInicio">
+	</div>
+	<div class="w3-content w3-display-container" style="max-width:800px">
+		
+        <div class="mySlides" >
+			<h1 class="tituloWelcome">Bienvenido!</h1>
+           
+            <p class="welcome">Hola, ¿no conoces tu estado actual físico? no te preocupes
+				hemos creado un test de ejercicios básicos con el cual nos ayudará a brindarte
+				mejor servicio en tus rutinas personalizadas, ¿estas listo para las pruebas?,
+				VAMOS...
+			</p>
+			<p class="welcome">Los ejercicios básicos se harán en un tiempo de 30 segundos al final de 
+				cada ejercicio nos dirás la cantidad hecha, dichos ejercicios son:
+				<ul class="bordes">
+					<li >
+						Flexiones/push up
+						<img src="img/flexion.gif" width="80%">
+					</li>
+					<li >
+						Sentadillas/Squat
+						<img src="img/sentadilla.gif" width="80%">
+					</li>
+					<li >
+						Absominales
+						<img src="img/abdominal.gif" width="80%">
+					</li>
+					<li >
+						Fondos/dips
+						<img src="img/fondo.gif" width="80%">
+					</li>
+				</ul>	
+				<div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">Comenzar test &#10095;</div>
+			</p>
+		</div>
+		
+
+        <div class="mySlides">
+			
+				<h2 class="titulo">1. Flexiones</h2>
+				<p class="hola">Las flexiones de brazos son un ejercicio muy común en cualquier disciplina deportiva, normalmente se utiliza para mejorar la condición física y poner a tono los músculos del tren superior. ¿Estás listo para la prueba?, VAMOS... </p>
+				<ul class="bordes">
+					<li style="font-size: 15px;">
+						Con este ejercicio trabajas...
+						<img src="img/flexionesTrabajo.jpg" width="80%">
+					</li>
+				</ul>
+				<div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)"> &#10095;</div>
+				
+	
+			</div>
+		</div>
+		
+
+        <div class="mySlides">
+			
+				<h2 class="titulo">1. Flexiones</h2>
+				<p class="hola">Haz las flexiones que puedas en 30 segundos, no importa si descansas, lo importante es hacerlas a tu ritmo, A los 30 segundos sonará una alarma así que no te preocupes por el tiempo...</p>
+				<div class="chronometer">
+				<div id="screen">00 : 00</div>
+				<div class="buttons">
+					<button class="emerald" onclick="start()">&#9658;</button>
+					<button class="emerald" onclick="stop()"> &#8718;</button>
+					<button class="emerald" onclick="resume()" > &#8634;</button>
+					<button class="emerald" onclick="reset()"> &#8635;</button>
+				</div>
+				
+			</div>
+			
+			<div id="res">
+				<audio id="audio" controls style="visibility: hidden;">
+				<source type="audio/mp3" src="song/alarma.mp3">
+				</audio>
+		
+				<p class="rango">BIEN HECHO</p>
+				<p id="descripcion">¿Cuántas flexiones hiciste?
+		
+				<input type="range" name="rangeInput" min="0" max="50" class="slider" id="myRange">
+				 <p style="color: white">Cantidad de Flexiones: <span id="demo"></span>Flexiones</p>
+				</p>
+				<a href="Explicacion1.html"><div class="w3-right w3-hover-text-khaki"> &#10095;</div></a>
+				
+			</div>
+			
+        </div>
+     </div>
+    <div class="next" style="width:100%">
+        <!-- <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>-->
+        
+        <span class="w3-badge demo w3-border w3-transparent w3-hover-white" "></span>
+        <span class="w3-badge demo w3-border w3-transparent w3-hover-white" "></span>
+        <span class="w3-badge demo w3-border w3-transparent w3-hover-white" "></span>
+    </div>
+    <script type="text/javascript">
+		window.onload=function(){
+			setTimeout('ocultar()',2000);
+		}
+		function ocultar(){
+			var contenedor = document.getElementById('contenedor_carga');
+
+			contenedor.style.visibility='hidden';
+			contenedor.style.opacity='0';
+		}
+	</script>
+    <script src="js/bienvenida.js"></script>
+	<script src="js/formulario.js"></script>
+	<script src="js/temporizador.js"></script>
+	<script src="js/rangos.js"></script>	
+	
+</body>
+
+</html>
+

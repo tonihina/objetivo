@@ -1,54 +1,94 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
-	<meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/bienvenida.css">
+	<link rel="stylesheet" href="css/estilos.css">
+	<link rel="stylesheet" href="css/temporizador.css">
+	
 
-	<title>Espera</title>
-	<link rel="stylesheet" type="text/css" href="css/carga.css">
-	<link rel="stylesheet" type="text/css" href="css/inicio.css">
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+<body class="fondo4">
+    <div id="contenedor_carga">
+		<img src="img/logo.png" id="logoInicio">
+	</div>
+	<div class="w3-content w3-display-container" style="max-width:800px">		
 
-</head>
-<body >
-	<div id="contenedor_carga">
-		<img src="img/logo.png" id="logo">
-		<img src="img/flexion.gif" id="ejercicio">
-		<div id="carga">
+        <div class="mySlides">
 			
-		</div>
-	</div>
-	<div class="header">
-	  <img src="img/logo.png">
-	  
-	</div>
-	<div id="explicacion">
-		<h2 id="titulo">Prueba de Tren superior</h2>
-		<h3 id="nombreEjercicio"> 1. Flexiones/Lagartijas</h3>
-		<h5 id="descripcion">
-			Las flexiones de brazos son un ejercicio muy común en cualquier disciplina deportiva, normalmente se utiliza para mejorar la condición física y poner a tono los músculos del tren superior. ¿Estás listo para la prueba?, VAMOS... 
-		</h5>
-		<div align="center" style="background-color: transparent;">
-			<img src="img/flexion.gif" id="muestra">
-			<br>
-			
+				<h2 class="titulo">2. Sentadillas</h2>
+				<p class="hola">Una sentadilla es un ejercicio físico que se lleva a cabo para desarrollar los músculos y fortalecer los tendones y los ligamentos de las piernas. También permite tonificar los glúteos y aporta beneficios a la cadera. ¿Estás listo para la prueba?, VAMOS...  </p>
+				<ul class="bordes">
+					<li style="font-size: 15px;">
+						Con este ejercicio trabajas...
+						<img src="img/sentadillaTrabajo.jpg" width="80%">
+					</li>
+				</ul>
+				<div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)"> &#10095;</div>
+				
+	
+			</div>
 		</div>
 		
+
+        <div class="mySlides">
+			
+				<h2 class="titulo">2. Sentadilla</h2>
+				<p class="hola">Haz las Sentadillas que puedas en 30 segundos, no importa si descansas, lo importante es hacerlas a tu ritmo, A los 30 segundos sonará una alarma así que no te preocupes por el tiempo...</p>
+				<div class="chronometer">
+				<div id="screen">00 : 00</div>
+				<div class="buttons">
+					<button class="emerald" onclick="start()">&#9658;</button>
+					<button class="emerald" onclick="stop()"> &#8718;</button>
+					<button class="emerald" onclick="resume()" > &#8634;</button>
+					<button class="emerald" onclick="reset()"> &#8635;</button>
+				</div>
+				
+			</div>
+			
+			<div id="res">
+				<audio id="audio" controls style="visibility: hidden;">
+				<source type="audio/mp3" src="song/alarma.mp3">
+				</audio>
 		
-	</div>
-	<footer>
-		<div align="center">
-			<a href="testFlexiones.html" id="signo">&#9658;Iniciar</span></a>
-		</div>
-	</footer>
-	<script type="text/javascript">
+				<p class="rango">BIEN HECHO</p>
+				<p id="descripcion">¿Cuántas Sentadillas hiciste?
+		
+					<input type="range" name="rangeInput" min="0" max="50" class="slider" id="myRange">
+					<p style="color: white">Cantidad de sentadillas: <span id="demo"> </span> Sentadillas</p>
+				</p>
+				<a href="Explicacion2.html"><div class="w3-right w3-hover-text-khaki"> &#10095;</div></a>
+				
+			</div>
+			
+        </div>
+     </div>
+    <div class="next" style="width:100%">
+        <!-- <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>-->
+        
+        <span class="w3-badge demo w3-border w3-transparent w3-hover-white" "></span>
+        <span class="w3-badge demo w3-border w3-transparent w3-hover-white" "></span>
+       
+    </div>
+    <script type="text/javascript">
 		window.onload=function(){
+			setTimeout('ocultar()',1000);
+		}
+		function ocultar(){
 			var contenedor = document.getElementById('contenedor_carga');
 
 			contenedor.style.visibility='hidden';
 			contenedor.style.opacity='0';
 		}
 	</script>
-	  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script src="js/bienvenida.js"></script>
+	<script src="js/formulario.js"></script>
+	<script src="js/temporizador.js"></script>
+	<script src="js/rangos.js"></script>	
+	
 </body>
+
 </html>
+
